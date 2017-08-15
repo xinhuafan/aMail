@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="w3.css">
+<form>
+    <h3>New Message:</h3>
+    <div id="left">
+        <label>Sender:</label>
+        <br>
+        <label>To:</label>
+        <br>
+        <label>Subject:</label>
+        <br>
+        <label>Date</label>
+        <br>
+        <label>Message:</label>
+    </div>
+    <div id="right">
+        <input type="email" ng-model="message.sender" placeholder="Sender">
+        <br>
+        <input type="text" ng-model="message.recipients" placeholder="Recipients">
+        <br>
+        <input type="text" ng-model="message.subject" placeholder="Subject">
+        <br>
+        <input type="text" ng-model="message.date" placeholder="Date">
+        <br>
+        <textarea type="text" ng-model="message.message" placeholder="Email Message"></textarea>
+        <br>
+        <a href="#!/"><button ng-click="send()">Send</button></a>
+    </div>
+</form>

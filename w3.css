@@ -1,0 +1,72 @@
+body {
+    margin:30px;
+    padding: 0;
+}
+
+#left {
+    width:100px;
+    height:100%;
+    float:left;
+}
+
+#iRight {
+    width:78%;
+    height:100%;
+    float:right;
+}
+
+#right {
+    width:90%;
+    height:100%;
+    float:right;
+}
+
+#compose {
+    font-size:0.8em;
+    color:white;
+    background-color:red;
+    height: 30px;
+    width:120px;
+}
+
+input, textarea {
+    width: 200px;
+}
+
+button {
+    margin-left: 155px;
+    height:25px;
+    background-color:blue;
+    color:white;
+}
+
+table {
+    background-color:lightgray;
+    border-collapse: collapse;
+    width:100%;
+}
+
+caption {
+    text-align: left;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size:20px;
+}
+
+#center {
+    text-align: center;
+    width: 80%;
+    display: block
+}
+
+#prev {
+    margin-left:200px;
+}
+
+#next {
+    margin-left:0;
+}
+
+.btn:disabled {
+    cursor:not-allowed;
+    opacity:0.3
+}

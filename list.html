@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="w3.css">
+<input type="text" ng-model="searchString" placeholder="Enter your search terms" style="width:100%"/>
+<table>
+  <caption>A-Mail</caption>
+  <tr>
+    <th><strong>Sender</strong></td>
+    <th><strong>Subject</strong></th>
+    <th><strong>Date</strong></th>
+  </tr>
+  <tr ng-repeat='message in messages | pagination: curPage * pageSize | limitTo: pageSize | searchFor: searchString'>
+    <td><a ng-href='#!/detail/{{message.id}}'>{{message.sender}}</a></td>
+    <td><a ng-href='#!/detail/{{message.id}}'>{{message.subject}}</a></td>
+    <td>{{message.date}}</td>
+  </tr>
+</table>
+<br>
+<form id="center" ng-show="messages.length"> 
+    <button id="prev" type="button" class="btn" ng-disabled="curPage == 0" ng-click="curPage=curPage-1"> &lt; PREV</button>
+    <span>Page {{curPage + 1}} of {{numberOfPages()}}</span>
+    <button id="next" type="button" class="btn" ng-disabled="curPage >= messages.length/pageSize - 1" ng-click="curPage = curPage+1">NEXT &gt;</button>
+</form>
